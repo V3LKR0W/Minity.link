@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minity not found :(</title>
+    <meta name="title" content="Minity.link">
+    <meta name="description" content="The url you entered doesn't exist :(">
+    <meta name=twitter:card content=summary>
+    <meta name=twitter:title content="Minity.link - Shortened link not found">
+    <meta name=twitter:description content="The url you entered does not exist :(">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/404styles.css') }}">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180984218-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180984218-1');
+</script>
+
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
+
+<div class='container'>
+    <h1 class='header'>The minity link you searched for doesn't exist!
+    <br>
+    <button class='redirect-btn'><a class='return-link' href="{{ url_for('index') }}"> Click here to generate your own link.</a></button>
+    </h1>
+</div>
+
+<script src="{{ url_for('static', filename='js/404main.js') }}"></script>
+</body>
+</html>

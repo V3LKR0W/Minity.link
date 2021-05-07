@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minity.Link - Privacy</title>
+    <meta name="title" content="Minity.link - Privacy">
+    <meta name="description" content="Read about how Minitly protect's your privacy.">
+    <meta name="theme-color" content="#03fc7f">
+    <meta name=twitter:card content=summary>
+    <meta name=twitter:title content="Minity.link - Privacy">
+    <meta name=twitter:description content="Read about how Minitly protect's your privacy.">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/privacystylesv1.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180984218-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180984218-1');
+</script>
+</head>
+<body>
+    <div class="container">
+        <a class='a-header' href="{{ url_for('index') }}"><h1 class="Header-1">Minity.<span class='Header-2'>Link</span></h1></a>
+
+        <h2 class='Subheader'>Privacy Policy & Terms Of Service:</h2>
+        <h2 class='Subheader-sm'>Updated on: 10/25/20</h2>
+        <hr>
+        <p class='text'>
+            This page is intended to inform visitors regarding our policies with collection of information.
+        </p>
+        <p class='text'> Information we collect when you submit a URL:</p>
+        <ul>
+            <li class='text'>Public IP address when you submit a link.</li>
+            <li class='text'>The URL you submitted.</li>
+        </ul>
+        <p class='text'>We do not sell data to third party companies. We will however supply information if requested by verified law enforcement or requested by a legal entity.</p>
+        <p class='text'>People who submit data must be atleast 13 years of age to submit data to our site, if you are a parent or guardian of someone under the age of 13 and know they have submitted data on our site please contact us so we can remove it.</p>
+        <p class='text'> For whatever reason if our service goes down we will make sure to give time for people to bookmark or notify owner of the link if avalible to change it. However we shall not be held accountable for losses related to if our service goes down.</p>
+        <p class='text'><a class='a-tag' href='https://discord.gg/SKBSqMn'>If you do need to contact us for whatever reason click here.</a></p>
+        <p class='text'>By using this site you are automatically agreeing to our Terms Of Service and Privacy Policy.</p>
+
+    </div>
+
+    <footer class='footer'><a class='footer-text' href='{{ url_for("index") }}'>Minity.Link</a> | <a class='footer-text' href='/privacy'>Privacy</a> | <a class='footer-text' href='https://discord.gg/SKBSqMn'>Contact</a></footer>
+</body>
+</html>

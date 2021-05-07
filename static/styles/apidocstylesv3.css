@@ -1,0 +1,126 @@
+body{
+    background-color: #222020;
+}
+
+.container{
+    margin-right: 2vw;
+    margin-left: 2vw;
+}
+
+.Header-1{
+    color: white;
+    font-family: 'Noto Sans KR', 'Times New Roman';
+    font-size: 4vw;
+    text-align: center;
+    padding-top: 5vh;
+    position: relative;
+    bottom: 8vh;
+}
+
+.Header-2{
+    color: #00FF47;
+    font-size: 2.5vw;
+    font-family: 'Raleway', 'Times New Roman';
+}
+
+.Subheader{
+    color: white;
+    text-align: center;
+    font-family: 'Staatliches', 'Times New Roman';
+    letter-spacing: 2px;
+    font-size: 2vw;
+}
+
+.animate{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+    margin-top: 25vh;
+    margin-bottom: 10vh;
+    background-color: #2e2b2b;
+}
+
+.lg-text{
+    display: block;
+    position: relative;
+    color: white;
+    text-align: center;
+    font-family: 'Staatliches', 'Times New Roman';
+    font-size: 1.5vw;
+}
+
+.a-header{
+    text-decoration: none;
+}
+
+.sm-text{
+    color: white;
+    font-family: 'Noto Sans KR', 'Times New Roman';
+    font-size: 1vw;
+}
+
+.sm-text-1{
+    margin-right: 14.5vw;
+    color: white;
+    font-family: 'Noto Sans KR', 'Times New Roman';
+    font-size: 1vw;
+}
+
+
+.sm-text-2{
+    margin-right: 18.5vw;
+    color: white;
+    font-family: 'Noto Sans KR', 'Times New Roman';
+    font-size: 1vw;
+}
+
+
+.lime{
+    color: #00FF47;;
+}
+
+.footer-text{
+    text-decoration: none;
+    font-family: 'Raleway', 'Times New Roman';
+    color: #00FF47;
+}
+
+.footer{
+    padding-top: 1vh;
+    text-align: center;
+    font-family: 'Raleway', 'Times New Roman';
+    color: white;
+    padding-top: 10vh;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .Header-1{
+        font-size: 15vw;
+    }
+    .Header-2{
+        font-size: 9vw;
+    }
+    .Subheader{
+        font-size: 6vw;
+    }
+    .lg-text{
+        font-size: 4vw;
+    }
+    .sm-text-1{
+        font-size: 3vw;
+        margin-left: 3vw;
+    }
+    .sm-text{
+        font-size: 3vw;
+        margin-left: 3vw;
+    }
+    .animate{
+        margin-top: 25vh;
+        margin-bottom: 25vh;
+        
+    }
+}

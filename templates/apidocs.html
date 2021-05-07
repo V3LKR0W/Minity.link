@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minity API Documentation</title>
+    <meta name="title" content="Minity.link - Api Documentation">
+    <meta name="description" content="Create a smaller link for your project!">
+    <meta name="theme-color" content="#03fc7f">
+    <meta name=twitter:card content=summary>
+    <meta name=twitter:title content="Minity.link - Api Documentation">
+    <meta name=twitter:description content="Create a smaller link for your project!">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/apidocstylesv3.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Staatliches">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180984218-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180984218-1');
+</script>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
+<div class="container">
+
+    <a class='a-header' href="{{ url_for('index') }}"><h1 class="Header-1">Minity.<span class='Header-2'>Link</span></h1></a>
+    <h2 class='Subheader'>API Documentation</h2>
+    <div class='animate'>
+        <div>
+        <p class='lg-text'>General Rules:</p>
+        <p class='sm-text'> • Do not proxy your requests or attempt to bypass our ratelimit, we will notice and all URL's you have ever created will get removed.</p>
+        <p class='sm-text'> • You may only make generate 50 *temporary*, Minity links per hour or you will start to get ratelimited.</p>
+        <p class='sm-text'> • Please do not spam the API with the same URL and route.</p>
+        <p class='sm-text'> • Please do not use for malicious purposes.</p>
+        <br>
+        <p class='sm-text'>~ Have Fun!</p>
+        </div>
+    </div>
+    
+    <div class='animate' id='#create'>
+        <div>
+        <p class='lg-text'>Creating a Minity link:</p>
+        <p class='sm-text-1'>Calling Method: <span class='lime'>POST</span></p>
+        <p class='sm-text-1'>Call To: <span class='lime'>https://minity.link/api/create</span></p>
+        <p class='sm-text-1'>Content Type: <span class='lime'>application/x-www-form-urlencoded</span></p>
+        <p class='sm-text-1'>Keys: <span class='lime'>{'url':'https://example.com'}</span></p>
+        </div>
+    </div>
+
+    <div class='animate' id='#statistic'>
+        <div>
+        <p class='lg-text'>Get minity global statistics:</p>
+        <p class='sm-text-2'>Calling Method: <span class='lime'>GET</span></p>
+        <p class='sm-text-2'>Call To: <span class='lime'>https://minity.link/api/statistics</span></p>
+        </div>
+
+    </div>
+
+
+<script src="{{ url_for('static', filename='js/docsmain.js') }}"></script>
+</div>
+<footer class='footer'><a class='footer-text' href='{{ url_for("index") }}'>Minity.Link</a> | <a class='footer-text' href='/privacy'>Privacy</a> | <a class='footer-text' href='https://discord.gg/SKBSqMn'>Contact</a></footer>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minity - Link shortener</title>
+    <meta name="title" content="Minity.link - Free and simple way to share your links!">
+    <meta name="description" content="Minity is a free url shortener. No account required and developer API support!">
+    <meta name="theme-color" content="#03fc7f">
+    <meta name=twitter:card content=summary>
+    <meta name=twitter:title content="Minity.link - Free and simple way to share your link">
+    <meta name=twitter:description content="Create a smaller link for free, no account required.">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/indexstylev5.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180984218-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180984218-1');
+</script>
+
+
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg==" crossorigin="anonymous"></script>    
+<div class='container'>
+
+        <a class='a-header' href="{{ url_for('index') }}"><h1 class='Header-1'>Minity<span class='Header-2'>.Link</span></h1></a>
+        <h1 class='Header-3'>Share your <span class='Header-4'></span>shorter</h1>
+        <form method="POST" action="/">
+            <div class='button-div'>
+                <input type="text" name="URL" class='text-area' autocorrect="off" autocapitalize="off" autocomplete="off" placeholder="https://minity.link"> 
+                <button class='push-button'>Create URL <img alt='url icon'src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAACa0lEQVQ4jZ2TXUiTURzGn53zvnvdVGyhmZig4hz5FaYEGgWpGRYhRRQGWmDSlV4UJBnZCLIPQsUujETUiwiKTLzQKE1kZWFllgOduNasJiWGmPs62/uerjbUSUnP7fk/v+f5H85R4T90qbErnkM+zhXsUG3UZGzq2OSR5WOSWjyrKDxdpFTNmO/yXwHVLS2S1qst1kjq035ZKUmMj1V2ZRnCDcnbcK31gVv2ywYhJMloJO6IhPwwUSxXZKUseksUz8nQR2ZvT1FxzmH7NocZuwOUkMmr5099DQJqb9xLFyWhTFGRMzpNmHZnhj48N11PdFGRAIAJiw0DI2OoOnEQj5++XPYwdhcAhLrb7dVqUThHKY3JzUxVZ6eliLHRumAjp8uDnoERmKdtOHm4AAKlmLF/FyRCHgGAABlmP1XiKo4US0kJW1etM2GxoXfwDZiPISM1EZmGJLybmIYoCqYr1eWLAEAaaiuHZJ9/f2f3M+fn2blg6v3eF+gbfousND1EQURpUT4AYPSTZcntYa2BEAIA1y9UmXyMlXQ9ee4ceDWGpo5ucBAcPVQIi/ULSovyEKHVYGnZhbn5BeqUnH2rACshg68/4EDBbuzNz8G4eQpxMTpkGpIAAOOTVkWgtOdOTY03BBCAAEBszGb8mP8Fy4w9WB0ARj9OOb0ef9tKT8g7AIDWzocAgMK8bERoNQCAnwuL+O1yM8k1a1rPE6KLt9r21Dd3LVvtDs455/3Do6y+ubNx7RxZzxxYJ3Cx1lkH3punmVfhHWvn/vmZ6m627yNq0i9Q6jDWVCRvuEFADbWVQwpTShjzNa13/gfiMv7NomuRygAAAABJRU5ErkJggg=="></button>
+            </div>
+        </form>
+        
+        <script>
+            var typed = new Typed('.Header-4', {
+                strings: [
+                    "playlists",
+                    "videos",
+                    "pictures",
+                    "memes",
+                    "twitter",
+                    "instagram",
+                    "tiktok",
+                    "soundcloud",
+                    "telegram",
+                    "reddit posts",
+                    "steam profile",
+                    "discord invite",
+                    "links",
+
+                ],
+                typeSpeed: 70,
+                backSpeed: 60,
+                loop: false
+            });
+        </script>
+
+        {% with messages = get_flashed_messages(category_filter=["category1"]) %}
+            {% if messages %}
+                    {% for message in messages %}
+                    <div class='output-div'>
+                        <input class='output' id='output' autocapitalize="off" value="https://minity.link/r/{{ message }}">
+                        <script>
+                            function Copy() {
+                                var outputText = document.getElementById('output');
+                                outputText.select();
+                                outputText.setSelectionRange(0,100);
+                                document.execCommand('copy');
+                            };
+                            
+                        </script>
+                        <button class='push-button' onclick="Copy()">Copy URL<img alt='copy icon' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAAaUlEQVQ4jd2SPQqAMAxGP6R4gJ5ZHPSgXsF0eS4OIv0LFAe/paEhL2+INCLAChj1GLCUAAbExpIInKUmnaZ5Gw8ga+MFPOupZ7CWHwFSzx1Isvd/uN9d0gHMFUaStDWVvFcZMv1xNp/kApj8iVex6+JlAAAAAElFTkSuQmCC"></button>
+                    </div>
+                    {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% with messages = get_flashed_messages(category_filter=["category2"]) %}
+            {% if messages %}
+                    {% for message in messages %}
+                    <div class='output-div'>
+                        <h1 class="Subheader"><span class='error-red'>{{message}}</span></h1>
+                    </div>
+                    {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% with messages = get_flashed_messages(category_filter=["category3"]) %}
+        {% if messages %}
+                {% for message in messages %}
+                <div class='output-div'>
+                    <img class='img-output' alt='qr code output' src='data:image/png;base64,{{message}}'>
+                    <h1 class='Subheader'>Shareable QR code</h1>
+                </div>
+                {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+        <div class='center-div-main'>
+            <p class='text-lg-header'>We have served over:</p>
+            <br>
+            <p class='text-sm-num'><span class='animate-number' id='animate-number'></span>Links!</p>
+            <br>
+            <p class='text-sm-num'><span class='animate-number' id='animate-number-clicks'></span>Clicks!</p>
+        </div>
+
+        <p id='numOfLinks' hidden>{{links_shortned}}</p>
+        <p id='numOfClicks' hidden>{{clicks}}</p>
+        <div class='scroll-div'>
+            <img class='scroll-center' alt='scroll down arrow' src="{{ url_for('static', filename='images/arrow-down.png') }}">
+        </div>
+
+        <div class='center-div'>
+            <p class='text-lg'>Shorten links on the fly using minity on your chrome browser:</p>
+            <a href='https://chrome.google.com/webstore/detail/minitylink/kgdbjdomnlfffdgadnjjooohoddalngd'><button class='ext'><img class='webstore' src="{{ url_for('static', filename='images/webstore.png') }}"/></button></a>
+
+            <p class='text-lg'>Minity's REST API:</p>
+            <p class='p-text'>
+                Minity offers a free REST Api to developers, unlike other popular link shorteners that charge money for an API token!
+                <br>
+                <br>
+                <a class='a-tag' href="{{ url_for('api_docs') }}">Click here to read documentation </a> <img alt='link icon' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAArUlEQVQ4jc3SPQ4BURTFcZkenZ0gFD6WMOzHR81WsA4aGvZAxwZ+mjfJZCKTqxG3uyf5n3ty3ms0fjHo4oQXDuh8A49wR44mNthH4UGCpyWtiWfU4IZ5RctxjMAZVhjjmrRJStSLJhjjgSlmCZ7UAX1csK7Ay6T36+Ci7XkZjkbtltvGOV1eIIsYnDCraHlRXsTgiVZpL9oeRg122KIdavuDQQf79NeP4Xf+i3kDir8EiMxZuyUAAAAASUVORK5CYII=">
+
+            </p>
+        </div>
+        <div class='center-div'>
+            <p class='text-lg'>About Minity</p>
+            <p class='p-text'>
+            Over the past decade trust in URL shorteners have gone down hill, reason being.. users have no easy way to check where the shortened
+            URL goes. To solve that problem in minity we use Embeds that show where your URL actually goes, no more worrying that the URL you just 
+            clicked goes to some malicious domain. We currently support URL embeds for popular the most popular metatag's for embeds such as: <a class='a-tag' href='https://ogp.me/'>Open Graph Protocols</a><img alt='link icon' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAArUlEQVQ4jc3SPQ4BURTFcZkenZ0gFD6WMOzHR81WsA4aGvZAxwZ+mjfJZCKTqxG3uyf5n3ty3ms0fjHo4oQXDuh8A49wR44mNthH4UGCpyWtiWfU4IZ5RctxjMAZVhjjmrRJStSLJhjjgSlmCZ7UAX1csK7Ay6T36+Ci7XkZjkbtltvGOV1eIIsYnDCraHlRXsTgiVZpL9oeRg122KIdavuDQQf79NeP4Xf+i3kDir8EiMxZuyUAAAAASUVORK5CYII="> & <a class='a-tag' href='https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards'>Twitter Cards</a><img alt='link icon' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAArUlEQVQ4jc3SPQ4BURTFcZkenZ0gFD6WMOzHR81WsA4aGvZAxwZ+mjfJZCKTqxG3uyf5n3ty3ms0fjHo4oQXDuh8A49wR44mNthH4UGCpyWtiWfU4IZ5RctxjMAZVhjjmrRJStSLJhjjgSlmCZ7UAX1csK7Ay6T36+Ci7XkZjkbtltvGOV1eIIsYnDCraHlRXsTgiVZpL9oeRg122KIdavuDQQf79NeP4Xf+i3kDir8EiMxZuyUAAAAASUVORK5CYII=">
+            So in short most modern social media sites such as twitter, slack and discord etc.. will render these embeds!
+            </p>
+        </div>
+        <div class='center-div'>
+                <p class='text-lg'>Support Minity</p>
+                <p class='p-text'>
+                Minity is a free to use link shortener, we do not sell your data to third-party services. Please consider supporting this project to keep minity free to everyone. Tap or Click the image below to donate!
+                </p>
+        </div>
+        <div class='patreon-container'>
+        <a href='https://patreon.com/minitly'><img alt='patreon picture' class='center-patreon' src="{{ url_for('static', filename='images/patreon.png') }}"></a>
+        </div>
+        <script type="text/javascript">
+            window.onload = function(){
+                var span = document.getElementById('animate-number')
+                var objects = {
+                    count: 0,
+                }
+                var num = document.getElementById('numOfLinks').innerHTML
+                let animation = anime({
+                    targets: objects,
+                    count: num,
+                    easing: 'linear',
+                    round: 1,
+
+                    update: function(){
+                        span.innerHTML = objects[Object.keys(objects)[0]];
+                    }
+                });
+                
+                var span1 = document.getElementById('animate-number-clicks')
+                var object = {
+                    count: 0,
+                }
+                var num1 = document.getElementById('numOfClicks').innerHTML
+                let animationclicks = anime({
+                    targets: object,
+                    count: num1,
+                    easing: 'linear',
+                    round: 1,
+
+                    update: function(){
+                        span1.innerHTML = object[Object.keys(object)[0]];
+                    }
+                });
+
+            const div = document.querySelector('.scroll-div');
+            const animatediv = () => {
+                anime({
+                    targets: div,
+                    loop: true,
+                    easing: 'linear',
+                    direction: 'alternate',
+                    translateY: {
+                        delay: 50,
+                        value: 20,
+                    },
+                    duration: 300
+                })
+                
+            };
+            animatediv()
+
+    };
+            
+        </script>
+        <footer class='footer'><a class='footer-text' href='{{ url_for("index") }}'>Minity.Link</a> | <a class='footer-text' href='/privacy'>Privacy</a> | <a class='footer-text' href='https://discord.gg/SKBSqMn'>Contact</a></footer>
+</body>
+</html>

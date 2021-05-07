@@ -1,0 +1,41 @@
+body {
+    background-color: #222020;
+}
+
+.container{
+    margin-right: 10vw;
+    margin-left: 10vw;
+}
+
+
+.header{
+    font-size: 5vh;
+    text-align: center;
+    color: white;
+    font-family: 'Noto Sans KR', 'Times New Roman';
+}
+
+.redirect-btn{
+    border-radius: 15px;
+    width: 80%;
+    background-color: #2e2b2b;
+    margin-top: 100px;
+    border-style: hidden;
+}
+
+.return-link{
+    text-decoration: none;
+    color: tomato;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+@media only screen and (max-width: 767px) {
+    .return-link{
+        font-size: 5vw;
+    }
+    .redirect-btn{
+        width: 80vw;
+    }
+
+}

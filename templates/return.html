@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#03fc7f">
+    <meta name="title" content="Minity.link">
+    <meta name="description" content="This Minity.link will take you to {{ url }}">
+    <meta name=twitter:card content=summary>
+    <meta name=twitter:title content="Minity.link">
+    <meta name=twitter:description content="This Minity.link will take you to {{ url }}">
+    <title>Minity redirect.</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180984218-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180984218-1');
+</script>
+
+
+</head>
+<body>
+    <script>
+        window.location.replace("{{url}}");
+    </script>
+    <p>Your browser should automatically redirect you to <a href="{{url}}">{{url}}</a> if not please enable javascript in your browser or click here.</p>
+</body>
+</html>

@@ -1,0 +1,309 @@
+body {
+    background-color: #222020;
+
+}
+
+
+.container{
+    margin-right: 2vw;
+    margin-left: 2vw;
+}
+
+.announce{
+    margin: 0 auto;
+    display: block;
+    width: 80vw;
+    border-radius: 5px;
+    background-color: #2e2b2b;
+    visibility: hidden;
+
+}
+
+.announce-text{
+    text-align: center;
+    font-family: 'Noto Sans KR', 'Times New Roman';
+    font-size: 1.1vw;
+    font-weight: 200;
+    color: white;
+    visibility: hidden;
+}
+
+
+.Header-1{
+    color: white;
+    font-family: 'Noto Sans KR', 'Times New Roman';
+    font-size: 4vw;
+    text-align: center;
+    padding-top: 5vh;
+    position: relative;
+    bottom: 8vh;
+}
+
+.Header-2{
+    color: #00FF47;
+    font-size: 2.5vw;
+    font-family: 'Raleway', 'Times New Roman';
+}
+
+.Header-3{
+    color: white;
+    font-family: 'Noto Sans KR', 'Times New Roman';
+    font-size: 1.5vw;
+    text-align: center;
+    position: relative;
+    bottom: 10vh;
+}
+
+.Header-4{
+    color: #00FF47;
+    font-family: 'Raleway', 'Times New Roman';
+}
+
+
+.Subheader{
+    padding-top: 50px;
+    text-align: center;
+    color: white;
+    font-family: 'Noto Sans KR', 'Times New Roman';
+    font-weight: 300;
+    font-size: 20px;
+}
+
+
+.text-area-div{
+    overflow: hidden; 
+}
+
+.text-area{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: medium;
+    border-radius: 15px;
+    font-family: 'Noto Sans KR', 'Times New Roman';
+    border: 5px solid transparent;
+    resize: none;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.text-area::-moz-selection { 
+    background: lightblue;
+}
+.text-area::selection {
+    background: lightblue;
+}
+
+.push-button{
+    display: block;
+    position: relative;
+    border-radius: 15px;
+    border: 5px solid transparent;
+    background-color: #26B923;
+    color:white;
+    margin: auto;
+    font-family: 'Noto Sans KR', 'Times New Roman';
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+    width: 150px;
+    transition: width 0.2s;
+}
+
+.push-button:hover{
+    width: 250px;
+}
+
+.button-div{
+    padding-top: 1vh;
+    text-align: center;
+}
+
+.output-div{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.output{
+    border-radius: 15px;
+    font-family: 'Noto Sans KR', 'Times New Roman';
+    border: 5px solid transparent;
+    font-size: medium;
+}
+
+.output::-moz-selection{
+    background: lightblue;
+}
+
+.output::selection{
+    background: lightblue;
+}
+
+.center-div-main{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 50vw;
+    padding-top: 50px;
+    padding-bottom: 15vh;
+    
+}
+
+.scroll-div{
+    display: block;
+    margin: 0 auto;
+}
+
+.scroll-center{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    padding-top: 0px;
+    margin-top: -5vh;
+    padding-bottom: 30px;
+}
+
+.center-div{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 40vw;
+    padding-top: 50px;
+}
+
+.ext{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 2vw;
+    border: 5px solid transparent;
+}
+
+.webstore{
+    width: 15vw;
+}
+
+.a-header{
+    text-decoration: none;
+}
+
+.center-patreon{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.a-tag{
+    text-decoration: none;
+    color: #4287f5;
+}
+.error-red{
+    color: #d12f24;
+}
+
+.p-text{
+    color: white;
+    font-family: 'Noto Sans KR', 'Times New Roman';
+    font-weight: 100;
+}
+
+
+.text-lg{
+    font-size: 2vw;
+    color: white;
+    font-family: 'Noto Sans KR', 'Times New Roman';
+}
+
+.text-lg-header{
+    font-size: 2vw;
+    color: white;
+    font-family: 'Noto Sans KR', 'Times New Roman';
+}
+
+.text-sm-num{
+    font-size: 1.5vw;
+    color: white;
+    font-family: 'Noto Sans KR', 'Times New Roman';
+    margin-top: -3.5vh;
+}
+
+.img-output{
+    padding-top: 2vh;
+}
+
+.animate-number{
+    color: #00FF47;
+    font-family: 'Noto Sans KR', 'Times New Roman';
+    font-size: 3vw;
+}
+
+.footer-text{
+    text-decoration: none;
+    font-family: 'Raleway', 'Times New Roman';
+    color: #00FF47;
+}
+
+.footer{
+    padding-top: 1vh;
+    text-align: center;
+    font-family: 'Raleway', 'Times New Roman';
+    padding-top: 10vh;
+    color: white;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .Header-1{
+       font-size: 15vw;
+    }
+ 
+    .Header-2{
+       font-size: 9vw;
+    }
+    
+    .Header-3{
+        font-size: 5vw;
+    }
+    .text-lg{
+        font-size: 10vw;
+    }
+    .text-lg-header{
+        font-size: 5vw;
+        padding-top: 10vh;
+    }
+    .p-text{
+        font-size: 4vw;
+    }
+    .center-div{
+        width: 80vw;
+    }
+    .push-button{
+        width: 50vw;
+        margin-bottom: 5vh;
+    }
+    .animate-number{
+        font-size: 10vw;
+    }
+    .center-div-main{
+        padding-bottom: 0vh;
+        margin-top: -13vh;
+    }
+    .text-sm-num{
+        font-size: 7vw;
+    }
+    .scroll-center{
+        margin-top: 10vh;
+    }
+    .ext{
+        font-size:4vw;
+    }
+    .webstore{
+        width: 60vw;
+        margin: 0 auto;
+    }
+}
